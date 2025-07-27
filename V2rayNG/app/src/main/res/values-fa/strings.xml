@@ -385,5 +385,6 @@
         <item>Least Ping</item>
         <item>Least Load</item>
     </string-array>
+  <string name="finding_best_server">در حال یافتن بهترین سرور...</string>
 
 </resources>

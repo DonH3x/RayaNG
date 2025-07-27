@@ -385,5 +385,6 @@
         <item>Наименьшая задержка</item>
         <item>Наименьшая нагрузка</item>
     </string-array>
+  <string name="finding_best_server">Поиск лучшего сервера</string>
 
 </resources>

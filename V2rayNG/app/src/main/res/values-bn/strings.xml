@@ -376,5 +376,6 @@
         <item>Least Ping</item>
         <item>Least Load</item>
     </string-array>
+  <string name="finding_best_server">সেরা সার্ভার খোঁজা হচ্ছে</string>
 
 </resources>

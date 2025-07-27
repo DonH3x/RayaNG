@@ -387,5 +387,6 @@
         <item>Least Ping</item>
         <item>Least Load</item>
     </string-array>
+    <string name="finding_best_server">Finding best server...</string>
 
 </resources>

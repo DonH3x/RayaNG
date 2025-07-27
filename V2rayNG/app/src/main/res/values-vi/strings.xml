@@ -373,5 +373,6 @@
         <item>Least Ping</item>
         <item>Least Load</item>
     </string-array>
+  <string name="finding_best_server">Đang tìm máy chủ tốt nhất</string>
 
 </resources>
