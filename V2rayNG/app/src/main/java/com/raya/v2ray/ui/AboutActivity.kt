@@ -116,7 +116,7 @@ class AboutActivity : BaseActivity() {
         }
 
         binding.layoutTgChannel.setOnClickListener {
-            Utils.openUri(this, AppConfig.TG_CHANNEL_URL)
+            Utils.openUri(this, AppConfig.TG_BOT_URL)
         }
 
         binding.layoutPrivacyPolicy.setOnClickListener {

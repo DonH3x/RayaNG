@@ -6,6 +6,7 @@ import android.os.IBinder
 import com.raya.v2ray.AppConfig.MSG_MEASURE_CONFIG
 import com.raya.v2ray.AppConfig.MSG_MEASURE_CONFIG_CANCEL
 import com.raya.v2ray.AppConfig.MSG_MEASURE_CONFIG_NUI
+import com.raya.v2ray.AppConfig.MSG_MEASURE_CONFIG_NUI_SUCCESS
 import com.raya.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
 import com.raya.v2ray.dto.EConfigType
 import com.raya.v2ray.extension.serializable
