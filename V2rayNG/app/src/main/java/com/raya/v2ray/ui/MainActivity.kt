@@ -212,28 +212,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         mainViewModel.selectServer.observe(this) { guid ->
             if (guid.isNotEmpty()) {
+                if (mainViewModel.isRunning.value == true)
+                    V2RayServiceManager.stopVService(this)
                 adapter.setSelectServer(guid)
-                mainViewModel.startServer.value = true
-            }
-        }
-
-        mainViewModel.startServer.observe(this) {
-            if (it == true) {
-                if (mainViewModel.isRunning.value == false) {
-                    if ((MmkvManager.decodeSettingsString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
-                        val intent = VpnService.prepare(this)
-                        if (intent == null) {
-                            startV2Ray()
-                        } else {
-                            requestVpnPermission.launch(intent)
-                        }
-                    } else {
+                if ((MmkvManager.decodeSettingsString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
+                    val intent = VpnService.prepare(this)
+                    if (intent == null) {
                         startV2Ray()
+                    } else {
+                        requestVpnPermission.launch(intent)
                     }
+                } else {
+                    startV2Ray()
                 }
             }
         }
-
 
         mainViewModel.updateTestResultAction.observe(this) { setTestState(it) }
         mainViewModel.isRunning.observe(this) { isRunning ->

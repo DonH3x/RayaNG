@@ -43,7 +43,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val updateListAction by lazy { MutableLiveData<Int>() }
     val updateTestResultAction by lazy { MutableLiveData<String>() }
     val selectServer by lazy { MutableLiveData<String>() }
-    val startServer by lazy { MutableLiveData<Boolean>() }
     private val tcpingTestScope by lazy { CoroutineScope(Dispatchers.IO) }
 
     private var bestServer: Pair<String, Long>? = null
@@ -256,7 +255,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun selectBestServer() {
         testedServerCount = 0
         selectServer.value = ""
-        startServer.value = false
 
         testAllRealPing(selectBest = true)
     }
