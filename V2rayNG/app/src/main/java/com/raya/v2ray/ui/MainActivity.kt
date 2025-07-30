@@ -210,8 +210,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         }
 
-        mainViewModel.selectServer.observe(this) { guid ->
-            if (guid.isNotEmpty()) {
+        mainViewModel.startBestServer.observe(this) { guid ->
+            if (guid == null) {
+                toastError(R.string.toast_failure)
+            } else if (guid.isNotEmpty()) {
                 if (mainViewModel.isRunning.value == true)
                     V2RayServiceManager.stopVService(this)
                 adapter.setSelectServer(guid)

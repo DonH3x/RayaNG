@@ -144,6 +144,10 @@ object AppConfig {
     const val MSG_MEASURE_CONFIG_NUI = 8
     const val MSG_MEASURE_CONFIG_NUI_SUCCESS = 81
 
+    /** Fast-Connect pattern and threshold */
+    const val FAST_CONNECT_PREFERRED_PATTERN = "master"
+    const val FAST_CONNECT_PING_THRESHOLD = 350L
+
     /** Notification channel IDs and names. */
     const val RAY_NG_CHANNEL_ID = "RAY_NG_M_CH_ID"
     const val RAY_NG_CHANNEL_NAME = "v2rayNG Background Service"
