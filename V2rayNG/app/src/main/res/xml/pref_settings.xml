@@ -18,6 +18,14 @@
         android:summary="@string/summary_pref_is_booted"
         android:title="@string/title_pref_is_booted" />
 
+    <PreferenceCategory android:title="@string/title_fc_settings">
+        <CheckBoxPreference
+          android:defaultValue="true"
+          android:key="pref_prefer_master_enabled"
+          android:summary="@string/summary_pref_prefer_master_enabled"
+          android:title="@string/title_pref_prefer_master_enabled" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/title_vpn_settings">
         <CheckBoxPreference
             android:key="pref_prefer_ipv6"

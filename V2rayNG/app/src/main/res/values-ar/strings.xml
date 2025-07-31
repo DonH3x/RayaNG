@@ -372,5 +372,10 @@
         <item>Least Load</item>
     </string-array>
   <string name="finding_best_server">جارٍ البحث عن أفضل خادم</string>
+  <string name="empty_server_list">Server list is empty!</string>
+  <string name="fast_connect_settings">Fast-Connect Settings</string>
+    <string name="title_fc_settings">Fast-Connect Settings</string>
+    <string name="title_pref_prefer_master_enabled">Prefer Master</string>
+    <string name="summary_pref_prefer_master_enabled">Fast-Connect puts \"Master/Unlimited\" servers in priority. On failure works as normal</string>
 
 </resources>

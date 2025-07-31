@@ -494,14 +494,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
           }
           testedServerCount++
           val resultPair = intent.serializable<Pair<String, Long>>("content") ?: return
-          val currentProfile = MmkvManager.decodeServerConfig(resultPair.first)
           if (resultPair.second >= 0) {
-            currentProfile?.let {
-              if (it.remarks.lowercase().contains(FAST_CONNECT_PREFERRED_PATTERN)
-                && resultPair.second <= FAST_CONNECT_PING_THRESHOLD
-              ) {
-                startBestServer.value = resultPair.first
-                return
+            if (MmkvManager.decodeSettingsBool(AppConfig.PREF_PREFER_MASTER_ENABLED, true)) {
+              val currentProfile = MmkvManager.decodeServerConfig(resultPair.first)
+              currentProfile?.let {
+                if (it.remarks.lowercase().contains(FAST_CONNECT_PREFERRED_PATTERN)
+                  && resultPair.second <= FAST_CONNECT_PING_THRESHOLD
+                ) {
+                  startBestServer.value = resultPair.first
+                  return
+                }
               }
             }
             if (bestServer == null || resultPair.second < bestServer!!.second)
