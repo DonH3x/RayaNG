@@ -33,7 +33,4 @@
         <item name="colorAccent">@color/color_fab_active</item>
     </style>
 
-    <style name="NavDrawerStyle">
-        <item name="fontFamily">@font/sahel_bold</item>
-    </style>
 </resources>

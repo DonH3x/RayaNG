@@ -36,13 +36,42 @@
                   android:layout_height="match_parent"
                   android:orientation="vertical">
 
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                      android:id="@+id/promotion"
+                      android:layout_width="match_parent"
+                      android:layout_height="52dp"
+                      android:gravity="center"
+                      android:background="@color/color_light_blue">
+                      <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                          android:src="@drawable/ic_telegram_24dp"
+                          app:tint="#fff"
+                          android:layout_marginRight="@dimen/padding_spacing_dp8"
+                          android:layout_width="26dp"
+                          android:layout_height="26dp"/>
+                        <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:textColor="#fff"
+                          android:fontFamily="@font/vazirmatn_bold"
+                          android:textSize="16sp"
+                          android:text="@string/raya_bot"/>
+                      </LinearLayout>
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
                     <com.google.android.material.progressindicator.LinearProgressIndicator
                       android:id="@+id/pb_waiting"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:indeterminate="true"
                       android:visibility="invisible"
-                      app:indicatorColor="@color/color_fab_active" />
+                      app:indicatorColor="#fff" />
 
                     <com.google.android.material.tabs.TabLayout
                       android:id="@+id/tab_group"
@@ -105,7 +134,7 @@
                       android:layout_marginBottom="8dp"
                       android:clickable="true"
                       android:focusable="true"
-                      app:backgroundTint="#03A9F4"
+                      app:backgroundTint="@color/color_light_blue"
                       app:fabSize="mini"
                       app:srcCompat="@drawable/ic_bolt_24dp" />
 
@@ -133,7 +162,6 @@
       android:layout_gravity="start"
       app:headerLayout="@layout/nav_header"
       app:itemIconTint="@color/colorAccent"
-      app:itemTextAppearance="@style/NavDrawerStyle"
       app:menu="@menu/menu_drawer">
 
     </com.google.android.material.navigation.NavigationView>
